@@ -33,7 +33,7 @@ void add_key(vars_t *vars)
 		free(newenv);
 		exit(127);
 	}
-	newnev[i + 1] = NULL;
+	newenv[i + 1] = NULL;
 	free(vars->env);
 	vars->env = newenv;
 }

@@ -18,7 +18,7 @@ void (*check_for_builtins(vars_t *vars))(vars_t *vars)
 
 	for (i = 0; check[i].f != NULL; i++)
 	{
-		if (_strcmp(vars->av[0], check[i].name) == 0)
+		if (_strcmpr(vars->av[0], check[i].name) == 0)
 			break;
 	}
 	if (check[i].f != NULL)
@@ -37,7 +37,7 @@ void new_exit(vars_t *vars)
 
 	if (_strcmpr(vars->av[0], "exit") == 0 && vars->av[1] != NULL)
 	{
-		status = _atoi(vars->av[1])
+		status = _atoi(vars->av[1]);
 		if (status == -1)
 		{
 			vars->status = 2;
@@ -126,7 +126,7 @@ void new_unsetenv(vars_t *vars)
 
 	if (vars->av[1] == NULL)
 	{
-		print_errors(vars, ": Incorrect number of arguments\n");
+		print_error(vars, ": Incorrect number of arguments\n");
 		vars->status = 2;
 		return;
 	{
