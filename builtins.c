@@ -129,7 +129,7 @@ void new_unsetenv(vars_t *vars)
 		print_error(vars, ": Incorrect number of arguments\n");
 		vars->status = 2;
 		return;
-	{
+	}
 	key = find_key(vars->env, vars->av[1]);
 	if (key == NULL)
 	{
