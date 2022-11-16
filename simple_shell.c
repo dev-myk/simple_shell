@@ -47,9 +47,9 @@ int main(int argc __attribute__((unused)), char **argv, char **environment)
 		vars.commands = tokenize(vars.buffer, ";");
 		for (i = 0; vars.commands && vars.commands[i] != NULL; i++)
 		{
-			vars.av = tokenize(vars.commands[i], "\n \t\r)"
+			vars.av = tokenize(vars.commands[i], "\n \t\r");
 			if (vars.av && vars.av[0])
-				if (check_for_bultins(&vars) == NULL)
+				if (check_for_builtins(&vars) == NULL)
 					check_for_path(&vars);
 		free(vars.av);
 		}
