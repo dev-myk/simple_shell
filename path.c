@@ -173,7 +173,7 @@ int check_for_dir(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] == '\')
+		if (str[i] == '/')
 			return (1);
 	}
 	return (0);
