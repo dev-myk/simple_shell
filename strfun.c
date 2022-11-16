@@ -88,7 +88,7 @@ char *_strcat(char *strc1, char *strc2)
 		len2 = 0;
 	else
 	{
-		for (len2 = 0; str2[len2]; len2++)
+		for (len2 = 0; strc2[len2]; len2++)
 			;
 	}
 	newlen = len1 + len2 + 2;
